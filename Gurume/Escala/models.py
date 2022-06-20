@@ -26,7 +26,7 @@ class BotafogoEscala(models.Model):
 
     funcionario = models.CharField(max_length=100, null=False, blank=False)
     dia = models.CharField(max_length=250, choices=dia_choice, null=False, blank=False)
-    hora = MultiSelectField(choices=hora_choice)
+    hora = MultiSelectField(choices=hora_choice, max_choices=4)
     funcao = models.CharField(max_length=250, choices=funcao_choice, null=False, blank=False)
     praca = models.CharField(max_length=250, choices=praca_choice, default='Nenhuma')
 
@@ -65,6 +65,8 @@ class IpanemaEscala(models.Model):
 
     def __str__(self):
         return str(self.get_funcao_display())
+
+
 class RDBEscala(models.Model):
     funcao_choice = (
         ('Folga','Folga'),('Produção','Produção'),('Finalização','Finalização'),('Slash','Slash'),('QA','QA'),('Inventário','Inventário'),('Fechamento','Fechamento'),('Almoço','Almoço'),('Janta','Janta')
