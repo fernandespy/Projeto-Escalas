@@ -2,7 +2,8 @@ backend:
   name: github
   repo: brunofernandes23/Projeto-Escalas
   branch: main
-  site_domain: https://gurume-escalas.netlify.app/
+  site_domain: gurume-escalas.netlify.app
+
 
 publish_mode: editorial_workflow
 media_folder: 'static/assets/img'
