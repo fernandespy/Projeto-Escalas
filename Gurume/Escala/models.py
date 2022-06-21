@@ -23,7 +23,6 @@ class BotafogoEscala(models.Model):
         ('Domingo','Domingo'),('Segunda','Segunda'),('Terça','Terça'),('Quarta','Quarta'),('Quinta','Quinta'),('Sexta','Sexta'),('Sábado','Sábado')
         )
 
-    restaurante_choice = (('Botafogo', 'Botafogo'))
 
     restaurante = models.CharField(max_length=50, default='Botafogo')
     funcionario = models.CharField(max_length=100, null=False, blank=False)
@@ -59,7 +58,6 @@ class IpanemaEscala(models.Model):
         ('Domingo','Domingo'),('Segunda','Segunda'),('Terça','Terça'),('Quarta','Quarta'),('Quinta','Quinta'),('Sexta','Sexta'),('Sábado','Sábado')
         )
 
-    restaurante_choice = (('Ipanema', 'Ipanema'))
 
     restaurante = models.CharField(max_length=50, default='Ipanema')
     funcionario = models.CharField(max_length=100, null=False, blank=False)
@@ -95,7 +93,6 @@ class RDBEscala(models.Model):
         ('Domingo','Domingo'),('Segunda','Segunda'),('Terça','Terça'),('Quarta','Quarta'),('Quinta','Quinta'),('Sexta','Sexta'),('Sábado','Sábado')
         )
 
-    restaurante_choice = (('RDB', 'RDB'))
 
     restaurante = models.CharField(max_length=50, default='RDB')
     funcionario = models.CharField(max_length=100, null=False, blank=False)
@@ -129,8 +126,6 @@ class FMALLEscala(models.Model):
     dia_choice = (
         ('Domingo','Domingo'),('Segunda','Segunda'),('Terça','Terça'),('Quarta','Quarta'),('Quinta','Quinta'),('Sexta','Sexta'),('Sábado','Sábado')
         )
-
-    restaurante_choice = (('Fashion Mall', 'Fashion Mall'))
 
     restaurante = models.CharField(max_length=50, default='Fashion Mall')
     funcionario = models.CharField(max_length=100, null=False, blank=False)
@@ -166,7 +161,6 @@ class TijucaEscala(models.Model):
         ('Domingo','Domingo'),('Segunda','Segunda'),('Terça','Terça'),('Quarta','Quarta'),('Quinta','Quinta'),('Sexta','Sexta'),('Sábado','Sábado')
         )
 
-    restaurante_choice = (('Tijuca', 'Tijuca'))
 
     restaurante = models.CharField(max_length=50, default='Tijuca')
     funcionario = models.CharField(max_length=100, null=False, blank=False)
@@ -200,7 +194,6 @@ class RioSulEscala(models.Model):
         ('Domingo','Domingo'),('Segunda','Segunda'),('Terça','Terça'),('Quarta','Quarta'),('Quinta','Quinta'),('Sexta','Sexta'),('Sábado','Sábado')
         )
 
-    restaurante_choice = (('Rio Sul', 'Rio Sul'))
 
     restaurante = models.CharField(max_length=50, default='Rio Sul')
     funcionario = models.CharField(max_length=100, null=False, blank=False)
