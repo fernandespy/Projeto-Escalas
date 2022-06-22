@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-@tr%0#i^!i#o*%@lc+@4=#^@m6jw95ugq-&sy%nejg5s4k7@7f
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "https://gurume-escalas.herokuapp.com/"
+    "https://gurume-escalas.herokuapp.com/",
+    '127.0.0.1'
 ]
 
 
@@ -89,7 +90,8 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'lord123',
         'HOST': 'localhost',
-        'PORT': '5432',}
+        'PORT': '5432',
+        }
 }
 
 
