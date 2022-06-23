@@ -19,16 +19,18 @@ class BotafogoEscala(models.Model):
         ('Produção','Produção')
         )
 
-
     dia_choice = (
         ('Domingo','Domingo'),('Segunda','Segunda'),('Terça','Terça'),('Quarta','Quarta'),('Quinta','Quinta'),('Sexta','Sexta'),('Sábado','Sábado')
         )
 
+
+    restaurante = models.CharField(max_length=50, default='Botafogo')
     funcionario = models.CharField(max_length=100, null=False, blank=False)
     dia = models.CharField(max_length=250, choices=dia_choice, null=False, blank=False)
-    hora = MultiSelectField(choices=hora_choice)
+    hora = MultiSelectField(choices=hora_choice, max_choices=4)
     funcao = models.CharField(max_length=250, choices=funcao_choice, null=False, blank=False)
     praca = models.CharField(max_length=250, choices=praca_choice, default='Nenhuma')
+    data = models.DateField()
 
     def __str__(self):
         return str(self.get_funcao_display())
@@ -52,19 +54,23 @@ class IpanemaEscala(models.Model):
         ('Produção','Produção')
         )
 
-
     dia_choice = (
         ('Domingo','Domingo'),('Segunda','Segunda'),('Terça','Terça'),('Quarta','Quarta'),('Quinta','Quinta'),('Sexta','Sexta'),('Sábado','Sábado')
         )
 
+
+    restaurante = models.CharField(max_length=50, default='Ipanema')
     funcionario = models.CharField(max_length=100, null=False, blank=False)
     dia = models.CharField(max_length=250, choices=dia_choice, null=False, blank=False)
     hora = MultiSelectField(choices=hora_choice)
     funcao = models.CharField(max_length=250, choices=funcao_choice, null=False, blank=False)
     praca = models.CharField(max_length=250, choices=praca_choice, default='Nenhuma')
+    data = models.DateField()
 
     def __str__(self):
         return str(self.get_funcao_display())
+
+
 class RDBEscala(models.Model):
     funcao_choice = (
         ('Folga','Folga'),('Produção','Produção'),('Finalização','Finalização'),('Slash','Slash'),('QA','QA'),('Inventário','Inventário'),('Fechamento','Fechamento'),('Almoço','Almoço'),('Janta','Janta')
@@ -83,16 +89,18 @@ class RDBEscala(models.Model):
         ('Produção','Produção')
         )
 
-
     dia_choice = (
         ('Domingo','Domingo'),('Segunda','Segunda'),('Terça','Terça'),('Quarta','Quarta'),('Quinta','Quinta'),('Sexta','Sexta'),('Sábado','Sábado')
         )
 
+
+    restaurante = models.CharField(max_length=50, default='RDB')
     funcionario = models.CharField(max_length=100, null=False, blank=False)
     dia = models.CharField(max_length=250, choices=dia_choice, null=False, blank=False)
     hora = MultiSelectField(choices=hora_choice)
     funcao = models.CharField(max_length=250, choices=funcao_choice, null=False, blank=False)
     praca = models.CharField(max_length=250, choices=praca_choice, default='Nenhuma')
+    data = models.DateField()
 
     def __str__(self):
         return str(self.get_funcao_display())
@@ -115,16 +123,18 @@ class FMALLEscala(models.Model):
         ('Produção','Produção')
         )
 
-
     dia_choice = (
         ('Domingo','Domingo'),('Segunda','Segunda'),('Terça','Terça'),('Quarta','Quarta'),('Quinta','Quinta'),('Sexta','Sexta'),('Sábado','Sábado')
         )
 
+    restaurante = models.CharField(max_length=50, default='Fashion Mall')
     funcionario = models.CharField(max_length=100, null=False, blank=False)
     dia = models.CharField(max_length=250, choices=dia_choice, null=False, blank=False)
     hora = MultiSelectField(choices=hora_choice)
     funcao = models.CharField(max_length=250, choices=funcao_choice, null=False, blank=False)
     praca = models.CharField(max_length=250, choices=praca_choice, default='Nenhuma')
+    data = models.DateField()
+    
 
     def __str__(self):
         return str(self.get_funcao_display())
@@ -147,16 +157,18 @@ class TijucaEscala(models.Model):
         ('Produção','Produção')
         )
 
-
     dia_choice = (
         ('Domingo','Domingo'),('Segunda','Segunda'),('Terça','Terça'),('Quarta','Quarta'),('Quinta','Quinta'),('Sexta','Sexta'),('Sábado','Sábado')
         )
 
+
+    restaurante = models.CharField(max_length=50, default='Tijuca')
     funcionario = models.CharField(max_length=100, null=False, blank=False)
     dia = models.CharField(max_length=250, choices=dia_choice, null=False, blank=False)
     hora = MultiSelectField(choices=hora_choice)
     funcao = models.CharField(max_length=250, choices=funcao_choice, null=False, blank=False)
     praca = models.CharField(max_length=250, choices=praca_choice, default='Nenhuma')
+    data = models.DateField()
 
     def __str__(self):
         return str(self.get_funcao_display())
@@ -178,16 +190,18 @@ class RioSulEscala(models.Model):
         ('Produção','Produção')
         )
 
-
     dia_choice = (
         ('Domingo','Domingo'),('Segunda','Segunda'),('Terça','Terça'),('Quarta','Quarta'),('Quinta','Quinta'),('Sexta','Sexta'),('Sábado','Sábado')
         )
 
+
+    restaurante = models.CharField(max_length=50, default='Rio Sul')
     funcionario = models.CharField(max_length=100, null=False, blank=False)
     dia = models.CharField(max_length=250, choices=dia_choice, null=False, blank=False)
     hora = MultiSelectField(choices=hora_choice)
     funcao = models.CharField(max_length=250, choices=funcao_choice, null=False, blank=False)
     praca = models.CharField(max_length=250, choices=praca_choice, default='Nenhuma')
+    data = models.DateField()
 
     def __str__(self):
         return str(self.get_funcao_display())
